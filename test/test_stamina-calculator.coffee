@@ -41,10 +41,10 @@ describe "StaminaCalculator", ->
       expect(@stamina_calculator.getNextMaxStaminaTime(10, 60)).to.eql(50*@stamina_recovery_time)
       done()
 
-    it.skip 'max data', (done) ->
+    it 'max data', (done) ->
       expect(@stamina_calculator.getNextMaxStaminaTime(60, 60)).to.eql(0)
       done()
 
-    it.skip 'invalid data', (done) ->
+    it 'invalid data', (done) ->
       expect(@stamina_calculator.getNextMaxStaminaTime(60, 10)).to.eql(0)
       done()
