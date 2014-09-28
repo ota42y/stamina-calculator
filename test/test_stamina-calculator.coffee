@@ -21,14 +21,14 @@ describe "StaminaCalculator", ->
       done()
 
     it 'correct data', (done)->
-      expect(@stamina_calculator.getMultipleRecoveryTime(10, 75, 25)).to.eql([15*@stamina_recovery_time, 40*@stamina_recovery_time, 65*@stamina_recovery_time, 50*@stamina_recovery_time])
+      expect(@stamina_calculator.getMultipleRecoveryTime(10, 75, 25)).to.eql([15*@stamina_recovery_time, 40*@stamina_recovery_time, 65*@stamina_recovery_time])
       done()
 
-    it.skip 'max data', (done) ->
+    it 'max data', (done) ->
       expect(@stamina_calculator.getMultipleRecoveryTime(25, 25, 2)).to.eql([])
       done()
 
-    it.skip 'invalid data', (done) ->
+    it 'invalid data', (done) ->
       expect(@stamina_calculator.getMultipleRecoveryTime(75, 25, 25)).to.eql([])
       done()
 

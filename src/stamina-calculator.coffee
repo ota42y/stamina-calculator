@@ -3,7 +3,14 @@ class StaminaCalculator
     @stamina_recovery_time = stamina_recovery_time
 
   getMultipleRecoveryTime: (now_stamina, max_stamina, multiple_stamina) ->
-    return [15*360, 40*360, 65*360, 50*360]
+    recovery_time = []
+    if now_stamina < max_stamina
+      temp_stamina = 0
+      while temp_stamina <= max_stamina
+        if now_stamina < temp_stamina
+          recovery_time.push (temp_stamina - now_stamina) * @stamina_recovery_time
+        temp_stamina += multiple_stamina
+    return recovery_time
 
   getNextMaxStaminaTime: (now_stamina, max_stamina) ->
     if now_stamina < max_stamina
