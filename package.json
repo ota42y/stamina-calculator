@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "hubot",
-    "note"
+    "social game",
+    "stamina"
   ],
   "scripts": {
     "test": "cake test"
