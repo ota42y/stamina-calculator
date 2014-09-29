@@ -17,5 +17,8 @@ class StaminaCalculator
       return (max_stamina - now_stamina) * @stamina_recovery_time
     return 0
 
+  toDate: (second) ->
+    return new Date(new Date().getTime() + second * 1000)
+
 
 module.exports.StaminaCalculator = StaminaCalculator
