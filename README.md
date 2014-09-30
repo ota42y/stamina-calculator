@@ -23,7 +23,7 @@ next_multiple_time = calc.getMultipleRecoveryTime(10, 60, 15)
 
 # get Date object
 next_max_second = @stamina_calculator.getNextMaxStaminaTime(10, 60)
-next_max_date = @stamina_calculator.toDate(next_max_second) # return date object 50*10*60 seconds from now
+next_max_date = @stamina_calculator.convertToDate(next_max_second) # return date object 50*10*60 seconds from now
 
 # lovelive! example
 # 1 stamina / 6 min
