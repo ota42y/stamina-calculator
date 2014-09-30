@@ -49,7 +49,7 @@ describe "StaminaCalculator", ->
       expect(@stamina_calculator.getNextMaxStaminaTime(60, 10)).to.eql(0)
       done()
 
-  describe 'toDate', ->
+  describe 'convertToDate', ->
     beforeEach (done) ->
       @stamina_calculator = new StaminaCalculator @stamina_recovery_time
 
@@ -60,6 +60,6 @@ describe "StaminaCalculator", ->
     it 'correct date', (done)->
       next_max_second = @stamina_calculator.getNextMaxStaminaTime(10, 60)
 
-      next_max_date = @stamina_calculator.toDate(next_max_second).getTime()
+      next_max_date = @stamina_calculator.convertToDate(next_max_second).getTime()
       expect(next_max_date).to.eql((new Date(50*@stamina_recovery_time)).getTime() * 1000)
       done()
