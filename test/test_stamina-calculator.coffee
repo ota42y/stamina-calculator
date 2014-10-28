@@ -78,3 +78,13 @@ describe "StaminaCalculator", ->
       next_levelup_clear_times = Math.ceil(@stamina_calculator.getNextLevelupTimes(1, 86))
       expect(next_levelup_clear_times).to.eql(1)
       done()
+
+  describe 'getRecoveredTime', ->
+    beforeEach (done) ->
+      @stamina_calculator = new StaminaCalculator @stamina_recovery_time
+      done()
+
+    it.skip 'correct data', (done)->
+      recover_time = @stamina_calculator.getRecoveredTime(125)
+      expect(recover_time).to.eql(125 * @stamina_recovery_time)
+      done()
