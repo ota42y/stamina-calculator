@@ -63,3 +63,18 @@ describe "StaminaCalculator", ->
       next_max_date = @stamina_calculator.convertToDate(next_max_second).getTime()
       expect(next_max_date).to.eql((new Date(50*@stamina_recovery_time)).getTime() * 1000)
       done()
+
+  describe 'getNextLevelupTimes', ->
+    beforeEach (done) ->
+      @stamina_calculator = new StaminaCalculator @stamina_recovery_time
+      done()
+
+    it.skip 'correct data', (done)->
+      next_levelup_clear_times = @stamina_calculator.getNextLevelupTimes(86 * 25, 86)
+      expect(next_levelup_clear_times).to.eql(25)
+      done()
+
+    it.skip 'small data', (done) ->
+      next_levelup_clear_times = Math.ceil(@stamina_calculator.getNextLevelupTimes(1, 86))
+      expect(next_levelup_clear_times).to.eql(1)
+      done()
