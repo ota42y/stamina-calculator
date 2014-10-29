@@ -1,11 +1,8 @@
 # stamina calculator
-
+This script is calculator for social game stamina.  
 [![NPM](https://nodei.co/npm/stamina-calculator.png)](https://nodei.co/npm/stamina-calculator/)  
 [![Travis CI](https://travis-ci.org/ota42y/stamina-calculator.svg?branch=master)](https://travis-ci.org/ota42y/stamina-calculator.svg?branch=master)
 ==========
-
-This script is calculator for social game stamina.
-
 
 # Usage
 

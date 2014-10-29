@@ -1,6 +1,6 @@
 {
   "name": "stamina-calculator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Stamina calculator for Japanese social game",
   "main": "./src/stamina-calculator.coffee",
   "author": {
