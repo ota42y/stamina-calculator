@@ -64,23 +64,23 @@ describe "StaminaCalculator", ->
       expect(next_max_date).to.eql((new Date(50*@stamina_recovery_time)).getTime() * 1000)
       done()
 
-  describe 'getNextLevelupTimes', ->
+  describe 'getNextLevelupCount', ->
     beforeEach (done) ->
       @stamina_calculator = new StaminaCalculator @stamina_recovery_time
       done()
 
     it 'correct data', (done)->
-      next_levelup_clear_times = @stamina_calculator.getNextLevelupTimes(86 * 25, 86)
+      next_levelup_clear_times = @stamina_calculator.getNextLevelupCount(86 * 25, 86)
       expect(next_levelup_clear_times).to.eql(25)
       done()
 
     it 'small data', (done) ->
-      next_levelup_clear_times = Math.ceil(@stamina_calculator.getNextLevelupTimes(1, 86))
+      next_levelup_clear_times = @stamina_calculator.getNextLevelupCount(1, 86)
       expect(next_levelup_clear_times).to.eql(1)
       done()
 
     it 'invalid data', (done) ->
-      next_levelup_clear_times = @stamina_calculator.getNextLevelupTimes(1, 0)
+      next_levelup_clear_times = @stamina_calculator.getNextLevelupCount(1, 0)
       expect(next_levelup_clear_times).to.eql(-1)
       done()
 

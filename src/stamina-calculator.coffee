@@ -17,9 +17,9 @@ class StaminaCalculator
       return @getRecoveredTime(max_stamina - now_stamina)
     return 0
 
-  getNextLevelupTimes: (next_exp, get_exp) ->
+  getNextLevelupCount: (next_exp, get_exp) ->
     if get_exp != 0
-      return next_exp / get_exp
+      return Math.ceil(next_exp / get_exp)
     return -1
 
   getRecoveredTime: (recovered_stamina) ->
