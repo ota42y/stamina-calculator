@@ -17,6 +17,11 @@ class StaminaCalculator
       return (max_stamina - now_stamina) * @stamina_recovery_time
     return 0
 
+  getNextLevelupTimes: (next_exp, get_exp) ->
+    if get_exp != 0
+      return next_exp / get_exp
+    return -1
+
   convertToDate: (second) ->
     return new Date(new Date().getTime() + second * 1000)
 

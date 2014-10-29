@@ -24,7 +24,7 @@ next_max_time = calc.getNextMaxStaminaTime(10, 80)
 # This return 3 time which now stamina is [25, 50, 75].
 next_multiple_time = calc.getMultipleRecoveryTime(10, 80, 25)
 
-# the number of clear times for next level up time
+# haw many clear the quest for next level up time
 # getNextLevelupTimes next_exp, get_exp
 # => next_exp / get_exp
 next_levelup_clear_times = calc.getNextLevelupTimes 1000, 86
