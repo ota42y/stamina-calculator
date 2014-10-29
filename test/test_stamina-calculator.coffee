@@ -89,7 +89,7 @@ describe "StaminaCalculator", ->
       @stamina_calculator = new StaminaCalculator @stamina_recovery_time
       done()
 
-    it.skip 'correct data', (done)->
+    it 'correct data', (done)->
       recover_time = @stamina_calculator.getRecoveredTime(125)
       expect(recover_time).to.eql(125 * @stamina_recovery_time)
       done()

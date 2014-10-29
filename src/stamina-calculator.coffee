@@ -22,6 +22,9 @@ class StaminaCalculator
       return next_exp / get_exp
     return -1
 
+  getRecoveredTime: (recovered_stamina) ->
+    return recovered_stamina * @stamina_recovery_time
+
   convertToDate: (second) ->
     return new Date(new Date().getTime() + second * 1000)
 
